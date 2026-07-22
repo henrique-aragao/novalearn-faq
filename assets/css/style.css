@@ -3,11 +3,11 @@
 
 :root{
       /* ===== Cores Principais ===== */
-    --cor-primaria: #3B82F6;
-    --cor-primaria-hover: #2563EB;
+    --cor-primaria: #256CF2;
+    --cor-primaria-hover: #1C4FE9;
 
-    --cor-secundaria: #2563EB;
-    --cor-secundaria-hover: #1D4ED8;
+    --cor-secundaria: #2931DA;
+    --cor-secundaria-hover: #272fbe;
 
     /* ===== Fundo ===== */
     --cor-fundo: #F8F9FE;
@@ -18,6 +18,7 @@
     --cor-texto: #374151;
     --cor-texto-claro: #6B7280;
     --cor-texto-footer: #D1D5DB;
+    --cor-texto-menu: #e9e8e8;
 
     /* ===== Bordas ===== */
     --cor-borda: #E5E7EB;
@@ -63,6 +64,7 @@
     --font-texto: 'Lato', sans-serif;
 
     --outline-focus: 2px solid var(--cor-primaria);
+    --outline-focus-menu: 2px solid var(--cor-borda);
     --transform-link: translateX(5px) translateY(-2px);
     --transform-botao: translateY(5px);
 }
@@ -75,6 +77,7 @@
 
 a{
     text-decoration: none;
+    font-family: inherit;
 }
 
 img{
@@ -91,19 +94,198 @@ h1, h2, h3{
     font-family: var(--font-titulo);
 }
 
+h1{
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+h2{
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+h3{
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+p{
+    color: var(--cor-texto);
+    line-height: 1.7;
+}
+
+p, a{
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
 body{
     min-height: 100vh;
     background-color: var(--cor-fundo);
     font-family: var(--font-texto);
+    line-height: 1.6;
+
 }
 
 
 /* Inicio do Menu*/
+.hero{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    min-height: 550px;
+    padding: 20px;
+    gap: 30px;
+    background: radial-gradient(circle at bottom left, rgba(255,255,255,.22), transparent 10%),linear-gradient(45deg, #7fb4f1 0%, #3B82F6 35%, #2563EB 65%, #1E3A8A 100%);
+    color: var(--cor-texto-menu);
+}
+
+.hero a{
+    color: var(--cor-texto-menu);
+    display: inline-block;
+    transition: transform .5s;
+}
+
+.hero a:hover{
+    transform: translateY(-2px);
+}
+
+.hero a:focus-visible{
+    border-radius: 5px;
+    outline: var(--outline-focus-menu);
+    outline-offset: 6px;
+    transform: translateY(-2px);
+}
+
+.hero p {
+    color: var(--cor-texto-menu);
+}
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 90%;
+    max-width: 1300px;
+    gap: 20px;
+    
+}
+
+.topo-logo{
+    flex: 1;
+    display: flex;
+    gap: 10px;
+}
+
+.menu-link{
+    flex: 2;
+    
+}
+
+.menu-link ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+.menu-link a:hover{
+    padding-bottom: 5px;
+    border-bottom: 2px solid var(--cor-borda);
+}
+
+.home {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+.home a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 5px 5px 10px #ffffff13;
+    width: 80%;
+    max-width: 250px;
+    padding: 10px 16px;
+    border-radius: 10px;
+    gap: 10px;
+    background-color: #345BF8;
+    transform: translateY(-1px);
+    transition: background-color .4s, box-shadow .4s, transform .4s;
+}
+
+.home a:hover{
+    transform: none;
+    box-shadow: none;
+    background-color: #274db4;
+}
+
+.home a:focus-visible{
+    background-color: #274db4;
+    border-radius: 10px;
+    outline: var(--outline-focus-menu);
+    outline-offset: 6px;
+    transform: translateY(1px);
+}
+
+.home a > img{
+    max-width: 30px;
+}
+
+
+.topo-menu{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.topo-texto{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 400px;
+}
+
+.topo-texto span{
+    text-align: center;
+    width: 60px;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    font-weight: 800;
+    background-color: #345bf867;
+    box-shadow: 5px 5px 10px #ffffff10;
+}
+
+.topo-imagem{
+    max-width: 850px;
+}
 /* Fim do Menu*/
 
 
 
+/* Inicio do Conteudo*/
+.container{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
 
+
+
+.cat-per{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 20px;
+}
+/* Fim do Conteudo*/
 
 
 
@@ -117,6 +299,10 @@ footer{
     gap: 20px;
     min-height: 350px;
     background-color: var(--cor-footer);
+    color: var(--cor-texto-footer);
+}
+
+footer p{
     color: var(--cor-texto-footer);
 }
 
@@ -162,7 +348,7 @@ footer a:focus-visible{
 }
 
 .navegacao li, .instit li{
-    margin: 10px 0px;
+    margin: 5px 0px;
 }
 
 
