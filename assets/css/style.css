@@ -1,4 +1,71 @@
 @charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Montserrat:wght@400;500;600;700;800&display=swap');
+
+:root{
+      /* ===== Cores Principais ===== */
+    --cor-primaria: #3B82F6;
+    --cor-primaria-hover: #2563EB;
+
+    --cor-secundaria: #2563EB;
+    --cor-secundaria-hover: #1D4ED8;
+
+    /* ===== Fundo ===== */
+    --cor-fundo: #F8F9FE;
+    --cor-card: #FFFFFF;
+
+    /* ===== Textos ===== */
+    --cor-titulo: #111827;
+    --cor-texto: #374151;
+    --cor-texto-claro: #6B7280;
+    --cor-texto-footer: #D1D5DB;
+
+    /* ===== Bordas ===== */
+    --cor-borda: #E5E7EB;
+    --cor-borda-hover: #BFDBFE;
+
+    /* ===== Categorias ===== */
+    --cor-categoria-hover: #EFF6FF;
+    --cor-categoria-ativa: #DBEAFE;
+
+    /* ===== FAQ ===== */
+    --cor-faq-hover: #F3F4F6;
+    --cor-faq-open: #EFF6FF;
+
+    /* ===== Geral ===== */
+    --cor-geral-claro: #DBEAFE;
+    --cor-geral: #3B82F6;
+
+    /* ===== Cursos ===== */
+    --cor-cursos-claro: #E6EEFD;
+    --cor-cursos: #2563EB;
+
+    /* ===== Certificados ===== */
+    --cor-certificados-claro: #EFEEFE;
+    --cor-certificados: #7C3AED;
+
+    /* ===== Pagamentos ===== */
+    --cor-pagamentos-claro: #E5F7F3;
+    --cor-pagamentos: #0D9488;
+
+    /* ===== Suporte ===== */
+    --cor-suporte-claro: #FFF3E9;
+    --cor-suporte: #F59E0B;
+    /* ===== Rodapé ===== */
+    --cor-footer: #152750;
+
+    /* ===== Ícones ===== */
+    --cor-icone: #3B82F6;
+    --cor-icone-fundo: #DBEAFE;
+
+
+    /* ===== Fontes ===== */
+    --font-titulo: 'Montserrat', sans-serif;
+    --font-texto: 'Lato', sans-serif;
+
+    --outline-focus: 2px solid var(--cor-primaria);
+    --transform-link: translateX(5px) translateY(-2px);
+    --transform-botao: translateY(5px);
+}
 
 *{
     padding: 0;
@@ -10,6 +77,143 @@ a{
     text-decoration: none;
 }
 
+img{
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
 li{
     list-style: none;
 }
+
+h1, h2, h3{
+    font-family: var(--font-titulo);
+}
+
+body{
+    min-height: 100vh;
+    background-color: var(--cor-fundo);
+    font-family: var(--font-texto);
+}
+
+
+/* Inicio do Menu*/
+/* Fim do Menu*/
+
+
+
+
+
+
+
+/* Inicio do Rodape*/
+footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    gap: 20px;
+    min-height: 350px;
+    background-color: var(--cor-footer);
+    color: var(--cor-texto-footer);
+}
+
+footer a{
+    display: inline-block;
+    transition: transform .4s, color .4s;
+    color: var(--cor-texto-footer);
+}
+
+footer a:hover{
+    text-decoration: underline;
+    color: var(--cor-card);
+    transform: var(--transform-link);
+}
+
+footer a:focus-visible{
+    text-decoration: underline;
+    border-radius: 5px;
+    outline: var(--outline-focus);
+    color: var(--cor-card);
+    outline-offset: 5px;
+    transform: var(--transform-link)    ;
+}
+
+.rodape-conteudo{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap:100px;
+    padding: 20px;
+    width:90%;
+    max-width:1300px;
+    border-bottom: 1px solid var(--cor-borda);
+}
+
+.logo{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.navegacao li, .instit li{
+    margin: 10px 0px;
+}
+
+
+.redes-sociais ul{
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+    gap: 20px;
+}
+
+.icon{
+    display: inline-block;
+    transition: transform .4s;
+    border: 2px solid var(--cor-borda);
+    border-radius: 50%;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.icon:hover{
+    transform: var(--transform-botao);
+}
+
+.icon img{
+    max-width: 30px;
+}
+
+.icon:focus-visible{
+    border-radius: 50%;
+    outline: var(--outline-focus);
+    outline-offset: 6px;
+    transform: var(--transform-botao);
+}
+
+.rodape-centro{
+    text-align: center;
+    padding: 10px;
+}
+
+.rodape-centro a{
+    text-decoration: underline;
+}
+
+.rodape-centro a:hover{
+    transform: none;
+    text-decoration: none;
+}
+
+.rodape-centro a:focus-visible{
+    text-decoration: underline;
+    transform: none;
+    outline-offset: 2px;
+}
+/* Fim do Rodape*/
