@@ -9,13 +9,13 @@
 </head>
 <body>
 
-    <header class=" menu">
+    <header class="menu">
         <!-- Logo -->
         <div class="topo-logo">
-            <div>
+            <div class="logo-imagem">
                 <img src="assets/icons/logo.png" alt="Logo NovaLearn Academy">
             </div>
-            <div>
+            <div class="logo-texto">
                 <h2>NovaLearn</h2>
                 <p>ACADEMY</p>
             </div>
@@ -60,54 +60,78 @@
             <div class="cat-per">
                 <!--Categorias-->
                 <div class="categoria">
-                    <input type="radio" id="geral" name="categoria" checked>
-                    <label for="geral">
-                        <div>
-                            <img src="assets/icons/geral.png" alt="Ícone geral">
-                        </div>
-                        <h3>Geral</h3>
-                        <p>Dúvidas gerais sobre a NovaLearn Academy.</p>
-                    </label>
+                    <div class="categoria-item">
+                        <input type="radio" id="geral" name="categoria" checked>
 
-                    <input type="radio" id="cursos" name="categoria">
-                    <label for="cursos">
-                        <div>
-                            <img src="assets/icons/curso.png" alt="Ícone curso">
-                        </div>
-                        <h3>Cursos</h3>
-                        <p>Informações sobre nossos cursos.</p>
-                    </label>
+                        <label for="geral">
+                            <img src="assets/icons/geral.png" alt="Ícone da categoria geral">
+                            
+                            <div class="categoria-info">
+                                <h3>Geral</h3>
+                                <p>Dúvidas gerais sobre a NovaLearn Academy.</p>
+                            </div>
+                        </label>
+                    </div>
 
-                    <input type="radio" id="certificados" name="categoria">
-                    <label for="certificados">
-                        <div>
-                            <img src="assets/icons/certificado.png" alt="Ícone certificado">
-                        </div>
-                        <h3>Certificados</h3>
-                        <p>Informações sobre certificados.</p>
-                    </label>
+                    
+                    <div class="categoria">
+                        <input type="radio" id="cursos" name="categoria">
 
-                    <input type="radio" id="pagamentos" name="categoria">
-                    <label for="pagamentos">
-                        <div>
-                            <img src="assets/icons/pagamento.png" alt="Ícone pagamento">
-                        </div>
-                        <h3>Pagamentos</h3>
-                        <p>Dúvidas sobre formas de pagamento.</p>
-                    </label>
+                        <label for="cursos">
+                            <img src="assets/icons/curso.png" alt="Ícone da categoria curso">
 
-                    <input type="radio" id="suporte" name="categoria">
-                    <label for="suporte">
-                        <div>
-                            <img src="assets/icons/suporte.png" alt="Ícone suporte">
-                        </div>
-                        <h3>Suporte</h3>
-                        <p>Atendimento e suporte ao aluno.</p>
-                    </label>
+                            <div class="categoria-info">
+                                <h3>Cursos</h3>
+                                <p>Informações sobre nossos cursos.</p>
+                            </div>
+                        </label>
+                    </div>
+
+
+                    <div class="categoria">
+                        <input type="radio" id="certificados" name="categoria">
+
+                        <label for="certificados">
+                            <img src="assets/icons/certificado.png" alt="Ícone da categoria certificado">
+      
+                            <div class="categoria-info">
+                                <h3>Certificados</h3>
+                                <p>Informações sobre certificados.</p>
+                            </div>
+                        </label>
+                    </div>
+                    
+
+                    <div class="categoria">
+                        <input type="radio" id="pagamentos" name="categoria">
+
+                        <label for="pagamentos">
+                            <img src="assets/icons/pagamento.png" alt="Ícone da categoria pagamento">
+
+                            <div class="categoria-info">
+                                <h3>Pagamentos</h3>
+                                <p>Dúvidas sobre formas de pagamento.</p>
+                            </div>
+                        </label>
+                    </div>
+                    
+
+                    <div class="categoria">
+                        <input type="radio" id="suporte" name="categoria">
+
+                        <label for="suporte">
+                                <img src="assets/icons/suporte.png" alt="Ícone da categoria suporte">
+
+                            <div class="categoria-info">
+                                <h3>Suporte</h3>
+                                <p>Atendimento e suporte ao aluno.</p>
+                            </div>
+                        </label>
+                    </div>
                 </div>
 
                 <!--perguntas-->
-                <div class="pergnta">
+                <div class="pergunta">
                     <!--Geral-->
                     <div id="content-geral">
                         <details>
@@ -204,7 +228,7 @@
         <!--Area de contato-->
         <section class="suporte">
             <div class="suporte-texto">
-                <div><img src="assets/icons/suporte-duvida.png" alt="Ícone suporte de duvidas"></div>
+                <div class="suporte-icone"><img src="assets/icons/suporte-duvida.png" alt="Ícone suporte de duvidas"></div>
                 <h3>Ainda tem dúvidas?</h3>
                 <p>Nossa equipe está pronta para ajudar você.</p>
             </div>
@@ -217,10 +241,11 @@
     
     <footer>
         <section class="rodape-logo">
-            <div>
+            <div class="logo-imagem">
                 <img src="assets/icons/logo.png" alt="Logo NovaLearn Academy">
             </div>
-            <div>
+
+            <div class="logo-texto">
                 <h2>NovaLearn</h2>
                 <p>ACADEMY</p>
             </div>
