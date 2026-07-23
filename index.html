@@ -60,12 +60,19 @@
 
             <div class="cat-per">
                 <!--Categorias-->
-                <div class="categoria">
-                    <div class="categoria-item">
-                        <input type="radio" id="geral" name="categoria" checked>
+                <input type="radio" id="geral" name="categoria" checked>
+                <input type="radio" id="cursos" name="categoria">
+                <input type="radio" id="certificados" name="categoria">
+                <input type="radio" id="pagamentos" name="categoria">
+                <input type="radio" id="suporte" name="categoria">
 
-                        <label for="geral">
-                            <img src="assets/icons/geral.png" alt="Ícone da categoria geral">
+                <div class="categoria">
+                    <div class="categoria-item cat-geral">
+                        <label for="geral" class="item">
+                            <div class="categoria-icone categoria-geral">
+                                <img src="assets/icons/geral.png" alt="Ícone da categoria geral">
+                            </div>
+
                             
                             <div class="categoria-info">
                                 <h3>Geral</h3>
@@ -75,11 +82,11 @@
                     </div>
 
                     
-                    <div class="categoria">
-                        <input type="radio" id="cursos" name="categoria">
-
-                        <label for="cursos">
-                            <img src="assets/icons/curso.png" alt="Ícone da categoria curso">
+                    <div class="categoria-item cat-curso">
+                        <label for="cursos" class="item">
+                            <div class="categoria-icone categoria-curso">
+                                <img src="assets/icons/curso.png" alt="Ícone da categoria curso">
+                            </div>
 
                             <div class="categoria-info">
                                 <h3>Cursos</h3>
@@ -89,12 +96,12 @@
                     </div>
 
 
-                    <div class="categoria">
-                        <input type="radio" id="certificados" name="categoria">
+                    <div class="categoria-item cat-certificado">
+                        <label for="certificados" class="item">
+                            <div class="categoria-icone categoria-certificado">
+                                <img src="assets/icons/certificado.png" alt="Ícone da categoria certificado">
+                            </div>
 
-                        <label for="certificados">
-                            <img src="assets/icons/certificado.png" alt="Ícone da categoria certificado">
-      
                             <div class="categoria-info">
                                 <h3>Certificados</h3>
                                 <p>Informações sobre certificados.</p>
@@ -103,11 +110,11 @@
                     </div>
                     
 
-                    <div class="categoria">
-                        <input type="radio" id="pagamentos" name="categoria">
-
-                        <label for="pagamentos">
-                            <img src="assets/icons/pagamento.png" alt="Ícone da categoria pagamento">
+                    <div class="categoria-item cat-pagamento">
+                        <label for="pagamentos" class="item">
+                            <div class="categoria-icone categoria-pagamento">
+                                <img src="assets/icons/pagamento.png" alt="Ícone da categoria pagamento">
+                            </div>
 
                             <div class="categoria-info">
                                 <h3>Pagamentos</h3>
@@ -117,11 +124,11 @@
                     </div>
                     
 
-                    <div class="categoria">
-                        <input type="radio" id="suporte" name="categoria">
-
-                        <label for="suporte">
+                    <div class="categoria-item cat-suporte">
+                        <label for="suporte" class="item">
+                            <div class="categoria-icone categoria-suporte">
                                 <img src="assets/icons/suporte.png" alt="Ícone da categoria suporte">
+                            </div>
 
                             <div class="categoria-info">
                                 <h3>Suporte</h3>
@@ -134,91 +141,91 @@
                 <!--perguntas-->
                 <div class="pergunta">
                     <!--Geral-->
-                    <div id="content-geral">
+                    <div id="content-geral" class="per-geral">
                         <details>
-                            <summary>O que é a NovaLearn Academy?</summary>
+                            <summary>O que é a NovaLearn Academy? <span class="seta">+</span></summary>
                             <p>A NovaLearn Academy é uma plataforma de ensino online voltada para o desenvolvimento profissional em tecnologia, design, negócios e outras áreas de alta demanda.</p>
                         </details>
 
                         <details>
-                            <summary>Preciso criar uma conta para acessar os cursos?</summary>
+                            <summary>Preciso criar uma conta para acessar os cursos?<span class="seta">+</span></summary>
                             <p>Sim. É necessário criar uma conta gratuita para comprar cursos, acompanhar seu progresso e emitir certificados.</p>
                         </details>
 
                         <details>
-                            <summary>Posso acessar a plataforma pelo celular?</summary>
+                            <summary>Posso acessar a plataforma pelo celular?<span class="seta">+</span></summary>
                             <p>Sim. Nossa plataforma é totalmente responsiva e pode ser utilizada em computadores, tablets e smartphones.</p>
                         </details>
                     </div>
 
                     <!--Cursos-->
-                    <div id="content-cursos">
+                    <div id="content-cursos"  class="per-cursos">
                         <details>
-                            <summary>Como faço para me matricular em um curso?</summary>
+                            <summary>Como faço para me matricular em um curso?<span class="seta">+</span></summary>
                             <p>Basta acessar a página do curso desejado, clicar em "Inscrever-se" e concluir o processo de matrícula.</p>
                         </details>
 
                         <details>
-                            <summary>Os cursos possuem aulas gravadas?</summary>
+                            <summary>Os cursos possuem aulas gravadas?<span class="seta">+</span></summary>
                             <p>Sim. Todas as aulas ficam disponíveis para que você estude quando e onde quiser.</p>
                         </details>
 
                         <details>
-                            <summary>Os cursos são atualizados?</summary>
+                            <summary>Os cursos são atualizados?<span class="seta">+</span></summary>
                             <p>Sim. Nosso conteúdo é revisado regularmente para acompanhar as mudanças do mercado.</p>
                         </details>
                     </div>
 
                     <!--Certificados-->
-                    <div id="content-certificados">
+                    <div id="content-certificados"  class="per-certificados">
                         <details>
-                            <summary>Receberei um certificado ao concluir um curso?</summary>
+                            <summary>Receberei um certificado ao concluir um curso?<span class="seta">+</span></summary>
                             <p>Sim. Após concluir todas as aulas e atividades obrigatórias, o certificado digital ficará disponível em sua conta.</p>
                         </details>
 
                         <details>
-                            <summary>O certificado possui validade?</summary>
+                            <summary>O certificado possui validade?<span class="seta">+</span></summary>
                             <p>Sim. Os certificados emitidos pela NovaLearn Academy podem ser utilizados para comprovação de horas complementares e atualização profissional, conforme as regras da instituição onde forem apresentados.</p>
                         </details>
 
                         <details>
-                            <summary>Posso baixar o certificado novamente?</summary>
+                            <summary>Posso baixar o certificado novamente?<span class="seta">+</span></summary>
                             <p>Sim. Você poderá acessar sua área de aluno e baixar o certificado sempre que precisar.</p>
                         </details>
                     </div>
 
                     <!--Pagamentos-->
-                    <div id="content-pagamentos">
+                    <div id="content-pagamentos"  class="per-pagamentos">
                         <details>
-                            <summary>Quais formas de pagamento são aceitas?</summary>
+                            <summary>Quais formas de pagamento são aceitas?<span class="seta">+</span></summary>
                             <p>Aceitamos cartão de crédito, PIX e boleto bancário.</p>
                         </details>
 
                         <details>
-                            <summary>Posso parcelar minha compra?</summary>
+                            <summary>Posso parcelar minha compra?<span class="seta">+</span></summary>
                             <p>Sim. O parcelamento está disponível para pagamentos realizados com cartão de crédito.</p>
                         </details>
 
                         <details>
-                            <summary>Como solicito um reembolso?</summary>
+                            <summary>Como solicito um reembolso?<span class="seta">+</span></summary>
                             <p>Você pode solicitar o reembolso dentro do prazo informado em nossa Política de Cancelamento.</p>
                         </details>
                     </div>
 
                     <!--suporte-->
-                    <div id="content-suporte">
+                    <div id="content-suporte"  class="per-suporte">
                         <details>
-                            <summary>Como entrar em contato com o suporte?</summary>
+                            <summary>Como entrar em contato com o suporte?<span class="seta">+</span></summary>
                             <p>Você pode falar conosco pelo formulário de contato ou pelo e-mail <a href="mailto:suporte@novalearnacademy.com">suporte@novalearnacademy.com</a>.</p>
                         </details>
 
                         <details>
-                            <summary>Qual o horário de atendimento?</summary>
+                            <summary>Qual o horário de atendimento?<span class="seta">+</span></summary>
                             <p>Nossa equipe atende de segunda a sexta-feira, das 9h às 18h (horário de Brasília).</p>
                         </details>
 
                         <details>
-                            <summary>Em quanto tempo receberei uma resposta?</summary>
+                            <summary>Em quanto tempo receberei uma resposta?<span class="seta">+</span></summary>
                             <p>Nosso prazo médio de resposta é de até 24 horas úteis.</p>
                         </details>
                     </div>
@@ -230,11 +237,14 @@
         <section class="suporte">
             <div class="suporte-texto">
                 <div class="suporte-icone"><img src="assets/icons/suporte-duvida.png" alt="Ícone suporte de duvidas"></div>
-                <h3>Ainda tem dúvidas?</h3>
-                <p>Nossa equipe está pronta para ajudar você.</p>
+                <div>
+                    <h3>Ainda tem dúvidas?</h3>
+                    <p>Nossa equipe está pronta para ajudar você.</p>
+                </div>
+                
             </div>
-            <div>
-                <a href="#" class="botao-suporte"><img src="assets/icons/envio.png" alt="Ícone envelope">Fale com nosso suporte</a>
+            <div class="botao-suporte">
+                <a href="#"><img src="assets/icons/envio.png" alt="Ícone envelope">Fale com nosso suporte</a>
             </div>
         </section>
         
