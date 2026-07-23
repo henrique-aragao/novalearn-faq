@@ -16,41 +16,42 @@
     /* ===== Textos ===== */
     --cor-titulo: #111827;
     --cor-texto: #374151;
-    --cor-texto-claro: #6B7280;
     --cor-texto-footer: #D1D5DB;
     --cor-texto-menu: #e9e8e8;
 
     /* ===== Bordas ===== */
-    --cor-borda: #E5E7EB;
+    --cor-borda: #d9dbdd;
     --cor-borda-hover: #BFDBFE;
 
     /* ===== Categorias ===== */
-    --cor-categoria-hover: #EFF6FF;
     --cor-categoria-ativa: #DBEAFE;
 
-    /* ===== FAQ ===== */
-    --cor-faq-hover: #F3F4F6;
-    --cor-faq-open: #EFF6FF;
 
     /* ===== Geral ===== */
     --cor-geral-claro: #DBEAFE;
     --cor-geral: #3B82F6;
+    --cor-sombra-geral: #b7c5d8;
 
     /* ===== Cursos ===== */
     --cor-cursos-claro: #E6EEFD;
     --cor-cursos: #2563EB;
+    --cor-sombra-cursos: #bfc9db;
 
     /* ===== Certificados ===== */
     --cor-certificados-claro: #EFEEFE;
     --cor-certificados: #7C3AED;
+    --cor-sombra-certificados: #c8c7e0;
 
     /* ===== Pagamentos ===== */
     --cor-pagamentos-claro: #E5F7F3;
     --cor-pagamentos: #0D9488;
+    --cor-sombra-pagamentos: #c5ddd8  ;
 
     /* ===== Suporte ===== */
     --cor-suporte-claro: #FFF3E9;
     --cor-suporte: #F59E0B;
+    --cor-sombra-suporte: #e0d2c7;
+
     /* ===== Rodapé ===== */
     --cor-footer: #152750;
 
@@ -95,7 +96,7 @@ h1, h2, h3{
 }
 
 h1{
-    font-size: 3rem;
+    font-size: 2rem;
     font-weight: 700;
 }
 
@@ -124,9 +125,7 @@ body{
     background-color: var(--cor-fundo);
     font-family: var(--font-texto);
     line-height: 1.6;
-
 }
-
 
 /* Inicio do Menu*/
 .hero{
@@ -140,6 +139,8 @@ body{
     gap: 30px;
     background: radial-gradient(circle at bottom left, rgba(255,255,255,.22), transparent 10%),linear-gradient(45deg, #7fb4f1 0%, #3B82F6 35%, #2563EB 65%, #1E3A8A 100%);
     color: var(--cor-texto-menu);
+    line-height: 1.2;
+    border-bottom: 3px solid var(--cor-borda-hover);
 }
 
 .hero a{
@@ -183,7 +184,11 @@ header{
 
 .menu-link{
     flex: 2;
-    
+}
+
+.menu-link a{
+    font-size: 1.2rem;
+    font-weight: 600;
 }
 
 .menu-link ul{
@@ -194,8 +199,8 @@ header{
 }
 
 .menu-link a:hover{
-    padding-bottom: 5px;
-    border-bottom: 2px solid var(--cor-borda);
+    padding-bottom: 2px;
+    border-bottom: 3px solid var(--cor-borda);
 }
 
 .home {
@@ -217,16 +222,17 @@ header{
     background-color: #345BF8;
     transform: translateY(-1px);
     transition: background-color .4s, box-shadow .4s, transform .4s;
+    font-weight: 600;
 }
 
 .home a:hover{
     transform: none;
     box-shadow: none;
-    background-color: #274db4;
+    background-image: linear-gradient(45deg, #245BD6, #214DB6);
 }
 
 .home a:focus-visible{
-    background-color: #274db4;
+    background-image: linear-gradient(45deg, #245BD6, #214DB6);
     border-radius: 10px;
     outline: var(--outline-focus-menu);
     outline-offset: 6px;
@@ -234,7 +240,7 @@ header{
 }
 
 .home a > img{
-    max-width: 30px;
+    max-width: 25px;
 }
 
 
@@ -251,6 +257,11 @@ header{
     max-width: 400px;
 }
 
+ .topo-texto h2{
+    font-size: 3rem;
+    font-weight: 800;
+ }
+
 .topo-texto span{
     text-align: center;
     width: 60px;
@@ -260,6 +271,15 @@ header{
     font-weight: 800;
     background-color: #345bf867;
     box-shadow: 5px 5px 10px #ffffff10;
+    transition: transform 1s, box-shadow .4s, color 1.1s, background-color 1.1s;
+}
+
+.topo-texto span:hover{
+    transform: rotate(360deg)translateX(100px);
+    box-shadow: none;
+    color: #ffffff00;
+    background-color: #ffffff00;
+    
 }
 
 .topo-imagem{
@@ -267,25 +287,371 @@ header{
 }
 /* Fim do Menu*/
 
-
-
 /* Inicio do Conteudo*/
 .container{
+    margin-top: 20px;
     display: flex;
     align-items: center;
     flex-direction: column;
+    gap: 30px;
+    text-align: center;
+}
+
+.faq h1{
+    color: var(--cor-titulo);
+}
+
+.faq p{
+    font-size: 1.25rem;
+}
+.categoria-info h3{
+    font-weight: 600;
+}
+
+.categoria-info p{
+    font-size: 1.15rem;
+}
+
+.cat-per{
+    margin: 20px;
+    width: 90%;
+    max-width: 1400px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.cat-per input[type="radio"] {
+    display: none;
+}
+
+.pergunta > div{
+    display: none;
+}
+
+#geral:checked ~ .pergunta #content-geral, #cursos:checked ~ .pergunta #content-cursos,#certificados:checked ~ .pergunta #content-certificados, #pagamentos:checked ~ .pergunta #content-pagamentos, #suporte:checked ~ .pergunta #content-suporte {
+    display: block;
+}
+
+#geral:checked ~ .pergunta #content-geral, #cursos:checked ~ .pergunta #content-cursos, #certificados:checked ~ .pergunta #content-certificados, #pagamentos:checked ~ .pergunta #content-pagamentos, #suporte:checked ~ .pergunta #content-suporte {
+    display: block;
+}
+
+.categoria{
+    flex: 2;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding:20px;
 }
 
 
+.categoria-item{
+    max-width: 600px;
+    background-color: var(--cor-card);
+    box-shadow: 5px 5px 10px #0000001e;
+    border-radius: 10px;
+    padding: 10px;
+    border: 2px solid var(--cor-borda);
+    transition: transform .4s, border .4s, box-shadow .4s, color .5s;
+}
 
-.cat-per{
+.categoria-item:hover{
+    transform: translateY(-5px) translateX(5px);
+    
+}
+
+.item{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    gap: 10px;
+}
+
+.categoria-icone{
+    border-radius: 50%;
+    padding: 20px;
+}
+
+.categoria-geral{
+    background-color: var(--cor-geral-claro);
+}
+
+.cat-geral:hover{
+    color: var(--cor-geral);
+    border: 2px solid var(--cor-geral);
+    box-shadow: 5px 5px 10px var(--cor-sombra-geral);
+}
+
+.categoria-curso{
+    background-color: var(--cor-cursos-claro);
+}
+
+.cat-curso:hover{
+    color: var(--cor-cursos);
+    border: 2px solid var(--cor-cursos);
+    box-shadow: 5px 5px 10px var(--cor-sombra-cursos);
+}
+
+.categoria-certificado{
+    background-color: var(--cor-certificados-claro);
+}
+
+.cat-certificado:hover{
+    color: var(--cor-certificados);
+    border: 2px solid var(--cor-certificados);
+    box-shadow: 5px 5px 10px var(--cor-sombra-certificados);
+}
+
+.categoria-pagamento{
+    background-color: var(--cor-pagamentos-claro);
+}
+
+.cat-pagamento:hover{
+    color: var(--cor-pagamentos);
+    border: 2px solid var(--cor-pagamentos);
+    box-shadow: 5px 5px 10px var(--cor-sombra-pagamentos);
+}
+
+.categoria-suporte{
+    background-color: var(--cor-suporte-claro);
+}
+
+.cat-suporte:hover{
+    color: var(--cor-suporte);
+    border: 2px solid var(--cor-suporte);
+    box-shadow: 5px 5px 10px var(--cor-sombra-suporte);
+}
+
+.categoria-icone img{
+    margin: auto;
+    width: 60px;
+}
+
+#geral:checked ~ .categoria .cat-geral .categoria-icone,
+#cursos:checked ~ .categoria .cat-curso .categoria-icone,
+#certificados:checked ~ .categoria .cat-certificado .categoria-icone,
+#pagamentos:checked ~ .categoria .cat-pagamento .categoria-icone,
+#suporte:checked ~ .categoria .cat-suporte .categoria-icone{
+    background-color: var(--cor-card);
+    
+}
+
+#geral:checked ~ .categoria .cat-geral {
+    transition: background-color .6s, box-shadow .6s;
+    transform: translateY(-6px) translateX(6px);
+    border-left: 3px solid var(--cor-geral);
+    background-color: var(--cor-geral-claro);
+    box-shadow: 5px 5px 10px var(--cor-sombra-geral);
+    color: var(--cor-geral);
+}
+
+#cursos:checked ~ .categoria .cat-curso{
+    transition: background-color .6s, box-shadow .6s;
+    transform: translateY(-6px) translateX(6px);
+    border-left: 3px solid var(--cor-cursos);
+    color: var(--cor-cursos);
+    background-color: var(--cor-cursos-claro);
+    box-shadow: 5px 5px 10px var(--cor-sombra-cursos);
+}
+
+#certificados:checked ~ .categoria .cat-certificado{
+    transition: background-color .6s, box-shadow .6s;
+    transform: translateY(-6px) translateX(6px);
+    border-left: 3px solid var(--cor-certificados);
+    color: var(--cor-certificados);
+    background-color: var(--cor-certificados-claro);
+    box-shadow: 5px 5px 10px var(--cor-sombra-certificados);
+}
+
+#pagamentos:checked ~ .categoria .cat-pagamento{
+    transition: background-color .6s, box-shadow .6s;
+    transform: translateY(-6px) translateX(6px);
+    border-left: 3px solid var(--cor-pagamentos);
+    color: var(--cor-pagamentos);
+    background-color: var(--cor-pagamentos-claro);
+    box-shadow: 5px 5px 10px var(--cor-sombra-pagamentos);
+}
+
+#suporte:checked ~ .categoria .cat-suporte{
+    transition: background-color .6s, box-shadow .6s;
+    transform: translateY(-6px) translateX(6px);
+    border-left: 3px solid var(--cor-suporte);
+    color: var(--cor-suporte);
+    background-color: var(--cor-suporte-claro);
+    box-shadow: 5px 5px 10px var(--cor-sombra-suporte);
+}
+
+.pergunta details{
+    text-align: left;
+    width: 600px;
+    margin: 20px;
+    background-color: var(--cor-card);
+    padding: 10px;
+    border: 2px solid var(--cor-borda);
+    box-shadow: 5px 5px 10px #0000001e;
+    border-radius: 10px;
+    transition: transform .4s, border .4s, box-shadow .4s;
+}
+
+.pergunta details:hover{
+    transform: translateY(-5px);
+}
+
+summary{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    font-size: 1.2rem;
+    font-weight: 900;
+    border-bottom: 1px solid var(--cor-borda);
+}
+
+details p{
+    font-size: 1.15rem;
+}
+
+.per-geral details:hover{
+    border: 2px solid var(--cor-geral);
+    box-shadow: 5px 5px 10px var(--cor-sombra-geral);
+}
+
+.per-geral details[open]{
+    border: 2px solid var(--cor-geral);
+    box-shadow: 5px 5px 10px var(--cor-sombra-geral);
+}
+
+.per-cursos details:hover{
+    border: 2px solid var(--cor-cursos);
+    box-shadow: 5px 5px 10px var(--cor-sombra-cursos);
+}
+
+.per-cursos details[open]{
+    border: 2px solid var(--cor-cursos);
+    box-shadow: 5px 5px 10px var(--cor-sombra-cursos);
+}
+
+
+.per-certificados details:hover{
+    border: 2px solid var(--cor-certificados);
+    box-shadow: 5px 5px 10px var(--cor-sombra-certificados);
+}
+
+.per-certificados details[open]{
+    border: 2px solid var(--cor-certificados);
+    box-shadow: 5px 5px 10px var(--cor-sombra-certificados);
+}
+
+.per-pagamentos details:hover{
+    border: 2px solid var(--cor-pagamentos);
+    box-shadow: 5px 5px 10px var(--cor-sombra-pagamentos);
+}
+
+.per-pagamentos details[open]{
+    border: 2px solid var(--cor-pagamentos);
+    box-shadow: 5px 5px 10px var(--cor-sombra-pagamentos);
+}
+
+.per-suporte details:hover{
+    border: 2px solid var(--cor-suporte);
+    box-shadow: 5px 5px 10px var(--cor-sombra-suporte);
+}
+
+.per-suporte details[open]{
+    border: 2px solid var(--cor-suporte);
+    box-shadow: 5px 5px 10px var(--cor-sombra-suporte);
+}
+
+summary::-webkit-details-marker {
+    display: none;
+}
+
+.seta{
+    transition: transform .6s;
+    color: var(--cor-primaria);
+    font-size: 1.6rem;
+    font-weight: 400;
+}
+
+details[open] .seta {
+    transform: rotate(45deg); 
+    color: red; /* Opcional: muda a cor no clique */
+}
+
+/* Fim do Conteudo*/
+
+/* Inicio do Contato*/
+.suporte{
+    width: 80%;
+    max-width: 1200px;
+    min-height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    background-color: var(--cor-categoria-ativa);
+    padding: 10px;
+    margin-bottom: 30px;
+    border-radius: 20px;
+}
+
+.suporte-texto{
+    text-align: left;
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: row;
+    flex: 1;
     gap: 20px;
 }
-/* Fim do Conteudo*/
+
+.suporte-icone{
+    background-color: var(--cor-card);
+    padding: 10px;
+    border-radius: 50%;
+}
+
+.botao-suporte{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.botao-suporte a{
+    max-width: 300px;
+    padding: 10px 16px;
+    border-radius: 10px;
+    background-color: var(--cor-primaria);
+    color: var(--cor-texto-menu);
+    box-shadow: 5px 5px 10px #0000001f;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 600;
+    transition: background-color .4s, box-shadow .4s, transform .4s ;
+}
+
+.botao-suporte a:hover{
+    box-shadow: none;
+    background-color: var(--cor-primaria-hover);
+    transform: translateY(3px);
+}
+
+.botao-suporte a:focus-visible{
+    background-color: var(--cor-secundaria-hover);
+    border-radius: 10px;
+    outline: var(--outline-focus);
+    outline-offset: 6px;
+    transform: translateY(1px);
+}
+
+.botao-suporte img{
+    max-width: 30px;
+}
+/* Fim do Contato*/
 
 
 
@@ -300,6 +666,7 @@ footer{
     min-height: 350px;
     background-color: var(--cor-footer);
     color: var(--cor-texto-footer);
+    border-top: 3px solid var(--cor-borda-hover);
 }
 
 footer p{
