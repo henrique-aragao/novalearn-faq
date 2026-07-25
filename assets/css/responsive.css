@@ -1,6 +1,135 @@
 /* ----- Tablet ----- */
 @media (max-width: 1024px){
+    
+    h1{
+        font-size: 1.8rem;
+    }
 
+    h2{
+        font-size: 1.6rem;
+    }
+
+    h3{
+        font-size: 1.4rem;
+        font-weight: 700;
+    }
+
+    p{
+        line-height: 1.4;
+    }
+
+    p, a{
+        font-size: 1.2rem;
+    }
+
+    /* Inicio do Menu*/
+    .hero{
+        padding: 20px 10px;
+        gap: var(--gap-pequeno);
+    }
+
+    header{
+        width: 100%;
+        gap: var(--gap-pequeno);
+    }
+
+    .menu-link a{
+        padding: 2px;
+    }
+
+    .home{
+        flex: 0 0 100%;
+        margin-bottom: 20px;
+    }
+
+    .home a{
+        margin-left: auto;
+        background-color: var(--cor-secundaria);
+        width: 90%;
+    }
+
+    .home a > img{
+        min-width: 30px;
+    }
+
+    .topo-texto{
+        gap: 5px;
+    }
+
+    .topo-texto h2{
+        font-size: 2.3rem;
+        font-weight: 700;
+    }
+
+    .topo-texto span{
+        width: 50px;
+        padding: 5px;
+        font-size: 1rem;
+    }
+    /* Fim do Menu*/
+
+    /* Inicio do Conteudo*/
+    .cat-per{
+        width: 90%;
+        padding: 10px 0px;
+    }
+
+    .categoria{
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: var(--padding-medio);
+    }
+
+    .categoria-item{
+        max-width: 300px;
+    }
+
+    .categoria-icone img{
+        max-width: 40px;
+    }
+
+    .pergunta{
+        margin: auto;
+    }
+    /* Fim do Conteudo*/
+
+    /* Inicio do Contato*/
+    .suporte{
+        width: 90%;
+    }
+
+    .suporte-texto{
+        gap: var(--padding-medio);
+    }
+
+    .botao-suporte a{
+        padding: 15px 20px;
+    }
+
+    .suporte-icone img{
+       min-width: 60px;
+    }
+    /* Fim do Contato*/
+
+    /* Inicio do Rodape*/
+    footer{
+        gap: var(--gap-pequeno);
+    }
+
+    .rodape-conteudo{
+        width: 100%;
+        gap: 40px;
+    }
+
+    .redes-sociais h3{
+        text-align: center;
+    }
+    
+    .rodape-centro{
+        padding: 15px ;
+    }
+    /* Fim do Rodape*/
 }
 
 /* ----- Celular ----- */
